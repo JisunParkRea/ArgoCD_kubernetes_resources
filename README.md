@@ -1,0 +1,1 @@
+# ArgoCD_kubernetes_resources
