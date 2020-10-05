@@ -1,4 +1,4 @@
-FROM golang:1.14.3-alpine AS build-env
+FROM golang AS build-env
 RUN mkdir /go/src/app && apk update && apk add git
 ADD main.go /go/src/app/
 WORKDIR /go/src/app
