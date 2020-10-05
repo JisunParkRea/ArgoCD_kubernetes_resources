@@ -2,7 +2,7 @@ pipeline {
 	agent none 
 	environment { 
 		SLACK_CHANNEL = '#studying' 
-		REGISTRY = 'jisunpark/django-sample' 
+		REGISTRY = 'jisunpark/golang-sample' 
 		REGISTRYCREDENTIAL = 'dockerhub' 
 		DOCKER_IMAGE = ''
 	}
