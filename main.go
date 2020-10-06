@@ -9,7 +9,7 @@ import (
 func main() {
     http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
         log.Println("received request")
-        fmt.Fprintf(w, "Hello Docker!!")
+        fmt.Fprintf(w, "Hello Golang Docker!!")
     })
     
     log.Println("Start server")
