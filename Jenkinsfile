@@ -42,6 +42,9 @@ pipeline {
       		}
 		} 
 		stage('Docker image push to Dockerhub') {
+			when {
+                branch 'master'
+            }
       		steps{
         		script {
           			docker.withRegistry('', REGISTRYCREDENTIAL) {
@@ -51,6 +54,9 @@ pipeline {
       		}
     	}
 		stage('Clean local docker image') { 
+			when {
+                branch 'master'
+            }
 			agent any
 				steps { 
 				sh 'docker rmi $REGISTRY:$BUILD_NUMBER' 
