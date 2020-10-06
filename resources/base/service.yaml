@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: django-svc
+  name: golang-svc
 spec:
   type: NodePort
   ports:
@@ -9,4 +9,4 @@ spec:
     targetPort: 8000
     nodePort: 31111
   selector:
-    app: django-deploy
+    app: golang-deploy

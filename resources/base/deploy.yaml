@@ -1,21 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: django-deploy
+  name: golang-deploy
   labels:
-    app: django-deploy
+    app: golang-deploy
 spec:
   replicas: 2
   selector:
     matchLabels:
-      app: django-deploy
+      app: golang-deploy
   template:
     metadata:
       labels:
-        app: django-deploy
+        app: golang-deploy
     spec:
       containers:
       - image: jisunpark/golang-sample:16
-        name: django-app
+        name: golang-app
         ports:
         - containerPort: 8000
