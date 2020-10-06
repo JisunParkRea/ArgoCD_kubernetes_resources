@@ -16,6 +16,7 @@ pipeline {
 		}
 		stage('Test') {
 			agent { docker { image 'golang:1.14' } }
+			environment { GOCACHE = '/tmp/gocache' }
 
             steps {                                           
                 // Create our project directory.
