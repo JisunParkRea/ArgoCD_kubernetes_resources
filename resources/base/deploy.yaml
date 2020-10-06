@@ -15,7 +15,7 @@ spec:
         app: django-deploy
     spec:
       containers:
-      - image: jisunpark/django-sample:30
+      - image: jisunpark/golang-sample:16
         name: django-app
         ports:
         - containerPort: 8000
